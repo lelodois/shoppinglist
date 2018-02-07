@@ -1,0 +1,26 @@
+{
+  "name": "shoppinglist",
+  "version": "1.0.0",
+  "description": "Electron ShoppingList desk app",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron ."
+  },
+  "devDependencies": {
+    "electron": "1.8.2",
+    "electron-packager": "^9.0.1"
+  },
+  "keywords": [
+    "node.js",
+    "eclipse",
+    "nodeclipse"
+  ],
+  "author": "",
+  "license": "MIT",
+  "readmeFilename": "README.md",
+  "dependencies": {
+    "dialog": "^0.3.1",
+    "electron-default-menu": "^1.0.1",
+    "electron-menu": "^1.0.0"
+  }
+}

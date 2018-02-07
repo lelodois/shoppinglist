@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+    <title>Adicionar Item</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.min.css">
+    </head>
+    <body>
+        <div class="container">
+            <form>
+                <div>
+                    <label>Novo Item</label>
+                    <input type="text" id="item" autofocus>
+                </div>
+                <button id="btnSave" class="waves-effect waves-light btn" type="submit">Save</button>
+            </form>
+        </div>
+
+        <script>
+            const electron = require('electron');
+            const {ipcRenderer} = electron;
+
+            document.querySelector('#btnSave').addEventListener('click', function (){
+                alert('teste');
+                console.log('In submit form - go');
+                const item = document.querySelector('#item').value;
+                console.log('In submit form - get item', item);
+                ipcRenderer.send('eventitem:add', item);
+                console.log('In submit form - sended event', item);
+            }
+        </script>
+    </body>
+</html>
